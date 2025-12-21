@@ -1,7 +1,13 @@
 <template>
   <nav class="bg-background px-5">
     <div class="border-b flex justify-between items-center" :style="{ height: `${NAVBAR_HEIGHT}px` }">
-      <img :src="CONNECT_VENDOR_ICON" alt="connect vendor" width="190px" class="px-3" />
+      <img
+        :src="CORNER_FLOWER"
+        alt="corner flower"
+        width="190px"
+        style="position: fixed; left: -15px; top: -20px; transform: rotate(180deg)"
+      />
+      <span></span>
       <div class="flex gap-1 items-center">
         <slot></slot>
         <DropdownMenu :options="LanguageOptions" :value="locale" @change="handleLocaleChange">
@@ -38,7 +44,7 @@
   import { IDropdownProps } from '@/components/shared/DropdownMenu.vue'
   import { useI18n } from 'vue-i18n'
   import EN_ICON from '@/assets/icons/en.png'
-  import CONNECT_VENDOR_ICON from '@/assets/logos/connect-vendor.png'
+  import CORNER_FLOWER from '@/assets/flowers/corner-flower.png'
   import AppProfile from '@/components/core/AppProfile.vue'
   import { NAVBAR_HEIGHT } from './constant'
 
